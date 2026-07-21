@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>郑灵杰 - 个人简历</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============================================================
+  书桌主场景
+  ============================================================ -->
+  <main id="desk-scene">
+    <img src="assets/svg/desk-bg.png" alt="书桌背景" class="desk-bg-img">
+
+    <div class="desk-container" id="desk-container">
+
+      <!-- 1. 挂历 — 墙上正中央 -->
+      <div class="desk-item wall-item" id="item-calendar" data-modal="calendar"
+           style="left: 39%; top: 2%;" title="挂历 · 工作经历">
+        <img src="assets/svg/calendar.png" alt="挂历" class="item-img">
+        <span class="item-label">挂历</span>
+      </div>
+
+      <!-- 2. 相框 — 墙上左侧 -->
+      <div class="desk-item wall-item" id="item-photoframe" data-modal="photoframe"
+           style="left: 5%; top: 10%;" title="相框 · 关于我">
+        <img src="assets/svg/photoframe.png" alt="相框" class="item-img">
+        <span class="item-label">相框</span>
+      </div>
+
+      <!-- 3. 台灯 — 桌面右侧上部 -->
+      <div class="desk-item" id="item-lamp" data-modal="lamp"
+           style="left: 75%; top: 26%;" title="台灯 · 切换暗黑/暖光模式">
+        <img src="assets/svg/lamp.png" alt="台灯" class="item-img">
+        <span class="item-label">台灯</span>
+      </div>
+
+      <!-- 4. 手机 — 手帐本左边 -->
+      <div class="desk-item" id="item-phone" data-modal="phone"
+           style="left: 8%; top: 58%;" title="手机 · 个人自媒体">
+        <img src="assets/svg/phone.png" alt="手机" class="item-img">
+        <span class="item-label">手机</span>
+      </div>
+
+      <!-- 5. 手帐本 — 桌面下半部正中央 -->
+      <div class="desk-item desk-center" id="item-notebook" data-modal="notebook"
+           style="left: 30%; top: 55%;" title="手帐本 · 品牌运营作品集">
+        <img src="assets/svg/notebook.png" alt="手帐本" class="item-img">
+        <span class="item-label">手帐本</span>
+      </div>
+
+      <!-- 6. 圆珠笔 — 手帐本右边 -->
+      <div class="desk-item" id="item-pen" data-modal="pen"
+           style="left: 58%; top: 58%;" title="圆珠笔 · 我的技能树">
+        <img src="assets/svg/pen.png" alt="圆珠笔" class="item-img">
+        <span class="item-label">圆珠笔</span>
+      </div>
+
+      <!-- 7. 名片 — 桌面右下角 -->
+      <div class="desk-item" id="item-businesscard" data-modal="businesscard"
+           style="left: 76%; top: 76%;" title="名片 · 联系我">
+        <img src="assets/svg/businesscard.png" alt="名片" class="item-img">
+        <span class="item-label">名片</span>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- 墨水轨迹（圆珠笔动画用） -->
+  <svg id="ink-trail" class="ink-trail">
+    <path id="ink-path" d="" fill="none" stroke="#3A5F8F" stroke-width="3" stroke-linecap="round"/>
+  </svg>
+
+  <!-- 模态弹窗 -->
+  <div id="modal-overlay" class="modal-overlay">
+    <div id="modal-panel" class="modal-panel">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div id="modal-body" class="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- 暗黑模式：覆盖层 + 暖色光晕 + 引文 -->
+  <div id="dark-overlay" class="dark-overlay"></div>
+  <div id="lamp-glow" class="lamp-glow"></div>
+  <div id="dark-quote" class="dark-quote">
+    <blockquote>
+      <p>"我每次想象出一块石头，就扔出去。"</p>
+      <cite>—— 艾丽斯·沃克</cite>
+    </blockquote>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</body>
+</html>
